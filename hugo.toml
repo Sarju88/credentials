@@ -1,0 +1,10 @@
+baseURL = "https://yourusername.github.io/"
+languageCode = "en-us"
+title = "My Hugo Site"
+theme = "ananke"
+
+[params]
+  # Ananke theme settings
+  showPoweredBy = true
+  showSocialLinks = true
+  showLanguageSelector = true
