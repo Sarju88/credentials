@@ -1,0 +1,78 @@
+(function() {
+    // Only allow this on the credentials website
+    if (window.location.href.includes("credentials.github.io")) {
+        
+        // Create the popup window
+        var popup = window.open('', 'Cheat Menu', 'width=400,height=300');
+        
+        // Write the HTML structure of the cheat menu into the popup window
+        popup.document.write(`
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Credential Cheat Menu</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    #cheatMenu {
+                        padding: 20px;
+                        background-color: #fff;
+                        border: 1px solid #ccc;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    }
+                    #cheatMenu input {
+                        margin: 5px;
+                        padding: 10px;
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                    #cheatMenu button {
+                        padding: 10px;
+                        margin-top: 10px;
+                        background-color: #4CAF50;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                    }
+                    #cheatMenu button:hover {
+                        background-color: #45a049;
+                    }
+                </style>
+            </head>
+            <body>
+                <div id="cheatMenu">
+                    <h2>Enter Credentials</h2>
+                    <input type="text" id="username" placeholder="Enter username">
+                    <input type="password" id="password" placeholder="Enter password">
+                    <button onclick="submitCredentials()">Submit</button>
+                </div>
+                <script>
+                    // Handle the submission of username and password
+                    function submitCredentials() {
+                        const username = document.getElementById('username').value;
+                        const password = document.getElementById('password').value;
+
+                        // Logging for fun (e.g., showing an alert)
+                        alert("Username: " + username + "\nPassword: " + password);
+
+                        // Optionally log it in the console for developers (only for fun)
+                        console.log("Cheat Menu Submitted");
+                        console.log("Username: " + username);
+                        console.log("Password: " + password);
+
+                        // Close the popup after submission
+                        window.close();
+                    }
+                </script>
+            </body>
+            </html>
+        `);
+    } else {
+        alert("This cheat menu can only be opened on the credentials website.");
+    }
+})();
