@@ -1,6 +1,6 @@
-baseURL = "https://yourusername.github.io/"
+baseURL = "https://arjunrao.github.io/credentials/"
 languageCode = "en-us"
-title = "My Hugo Site"
+title = "Credentials"
 theme = "ananke"
 
 [params]
